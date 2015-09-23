@@ -28,8 +28,8 @@ public class SecondActivity extends Activity {
                 String msg = edtShare.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/html");
-                intent.putExtra(intent.EXTRA_TEXT,msg);
-                startActivity(intent.createChooser(intent,"Compartir vía..."));
+                intent.putExtra(Intent.EXTRA_TEXT,msg);
+                startActivity(Intent.createChooser(intent,"Compartir vía..."));
             }
         });
     }
